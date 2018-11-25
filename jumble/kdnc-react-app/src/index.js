@@ -10,8 +10,13 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers';
 
+/* Kdnc - connected-react-router - Step 1
+Create a history object. */
 const history = createBrowserHistory();
 
+/* Kdnc - connected-react-router - Step 4
+Use routerMiddleware(history) if you want to dispatch history actions
+(e.g. to change URL with push('/path/to/somewhere')). */
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   rootReducer(history),

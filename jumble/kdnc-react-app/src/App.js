@@ -28,6 +28,9 @@ import './App.css';
 //   }
 // }
 
+/* Kdnc - connected-react-router - Step 5
+Wrap your react-router v4 routing with ConnectedRouter and pass the history object as a prop.
+Place ConnectedRouter as a child of react-redux's Provider. */
 const App = ({ history }) => {
   return (
     <ConnectedRouter history={history}>
