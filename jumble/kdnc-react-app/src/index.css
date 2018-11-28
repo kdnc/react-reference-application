@@ -13,6 +13,15 @@ code {
     monospace;
 }
 
+.leftNavContainer {
+  padding: 20px;
+  position: absolute;
+  width: 180px;
+  background-color: #F15B2A;
+  display: block;
+  height: 100%;
+}
+
 a.activeNavLink {
   font-weight: bold;
   font-size: 18px;
@@ -22,4 +31,9 @@ a.activeNavLink {
 a.navLink {
   font-size: 18px;
   list-style-type: none;
+}
+
+li.nav {
+  list-style-type: none;
+  margin-left: -30px;
 }
