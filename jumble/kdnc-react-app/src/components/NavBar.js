@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => (
   <div>
     <div>
-      <Link to="/">Home</Link>
-      <Link to="/hello">Hello</Link>
-      <Link to="/prompt">Prompt</Link>
+      <NavLink to="/" className={'navLink'} activeClassName={'activeNavLink'} exact>Home</NavLink>
+      <NavLink to="/hello" className={'navLink'} activeClassName={'activeNavLink'}>Hello</NavLink>
+      <NavLink to="/prompt" className={'navLink'} activeClassName={'activeNavLink'}>Prompt</NavLink>
     </div>
   </div>
 );

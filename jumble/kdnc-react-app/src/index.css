@@ -12,3 +12,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+a.activeNavLink {
+  font-weight: bold;
+  font-size: 18px;
+  list-style-type: none;
+}
+
+a.navLink {
+  font-size: 18px;
+  list-style-type: none;
+}
