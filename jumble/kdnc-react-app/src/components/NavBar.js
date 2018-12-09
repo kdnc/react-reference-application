@@ -5,6 +5,7 @@ const NavBar = () => {
 
   const links = [
     {name: 'Prompt', url: '/prompt'},
+    {name: 'Color', url: '/color'},
     {name: '404 Error', url: '/404Error'},
   ];
 
