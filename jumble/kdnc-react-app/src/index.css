@@ -22,6 +22,12 @@ code {
   height: 100%;
 }
 
+.rightContentContainer {
+  margin-left: 250px;
+  width: 80%;
+  display: block;
+}
+
 a.activeNavLink {
   font-weight: bold;
   font-size: 18px;
