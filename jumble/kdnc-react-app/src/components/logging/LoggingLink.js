@@ -4,10 +4,6 @@ import { Link, withRouter } from "react-router-dom";
 
 class LoggingLink extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render = () => {
         // replace works on the history stack
         return (
