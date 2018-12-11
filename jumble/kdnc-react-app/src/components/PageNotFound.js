@@ -17,7 +17,7 @@ const PageNotFound = (props) => {
     <div style={{textAlign:'center'}}>
       <h1>{message}</h1>
       <div style={style404}>404</div>
-      <img src={'/assets/Black_Hole_Orange.png'} />
+      <img alt={'Page not found'} src={'/assets/Black_Hole_Orange.png'} />
     </div>
   );
 };
