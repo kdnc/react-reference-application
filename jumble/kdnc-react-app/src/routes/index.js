@@ -10,6 +10,7 @@ import ProtectedRoute from "../components/secure/ProtectedRoute";
 import ProtectedHome from "../components/secure/ProtectedHome";
 import Login from "../components/secure/Login";
 import Logout from "../components/secure/Logout";
+import SmartColorSwatch from "../components/colors/SmartColorSwatch";
 
 const routes = (
   <div>
@@ -18,9 +19,12 @@ const routes = (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/prompt" component={NameForm} />
+
+        <Route path='/color/:text/:color' component={SmartColorSwatch}/>
         <Route path='/color' render={() => {
           return <ColorSwatch text='Red' color='#ff0000'/>
         }}/>
+
         <Route path='/logging' component={LoggingHome}/>
 
         <ProtectedRoute path={'/protected'} component={ProtectedHome}/>
