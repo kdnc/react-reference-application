@@ -11,6 +11,8 @@ import ProtectedHome from "../components/secure/ProtectedHome";
 import Login from "../components/secure/Login";
 import Logout from "../components/secure/Logout";
 import SmartColorSwatch from "../components/colors/SmartColorSwatch";
+import People from "../components/people/People";
+import PersonProfileContainer from "../containers/PersonProfileContainer";
 
 const routes = (
   <div>
@@ -26,6 +28,9 @@ const routes = (
         }}/>
 
         <Route path='/logging' component={LoggingHome}/>
+
+        <Route path={'/people/:id'} component={PersonProfileContainer}/>
+        <Route path={'/people'} component={People}/>
 
         <ProtectedRoute path={'/protected'} component={ProtectedHome}/>
         <Route path={'/login'} component={Login}/>
