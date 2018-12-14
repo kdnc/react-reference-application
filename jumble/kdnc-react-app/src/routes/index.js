@@ -15,6 +15,8 @@ import People from "../components/people/People";
 import PersonProfileContainer from "../containers/PersonProfileContainer";
 import PlacesContainer from "../containers/place/PlacesContainer";
 import RecursiveColorSwatch from "../components/colors/RecursiveColorSwatch";
+import Unicorn from "../components/redirect-finished/Unicorn";
+import {Redirect} from "react-router-dom";
 
 const routes = (
   <div>
@@ -43,7 +45,11 @@ const routes = (
         <Route path={'/login'} component={Login}/>
         <Route path={'/logout'} component={Logout}/>
 
+        <Route path={'/redirect-finished'} component={Unicorn}/>
+        <Redirect to='/redirect-finished' from='/redirect'/>
+
         <Route component={PageNotFound} />
+
       </Switch>
     </div>
   </div>

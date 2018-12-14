@@ -13,6 +13,7 @@ const NavBar = () => {
     {name: 'Places', url: '/places'},
     {name: 'Protected', url: '/protected'},
     {name: '404 Error', url: '/404Error'},
+    {name: 'Redirect Route', url: '/redirect'},
   ];
 
   let linksComponents = links.map((link, index) => {
