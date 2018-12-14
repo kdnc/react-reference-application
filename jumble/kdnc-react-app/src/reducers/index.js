@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
+import placesReducer from "./placesReducer";
 
 /* Kdnc - connected-react-router - Step 2
 Create root reducer as a function that takes history as an argument and returns reducer. */
@@ -7,7 +8,8 @@ Create root reducer as a function that takes history as an argument and returns 
 Add router reducer into root reducer by passing history to connectRouter.
 Note: The key MUST be router. */
 const rootReducer = (history) => combineReducers({
-  router: connectRouter(history)
+  router: connectRouter(history),
+  places: placesReducer
 });
 
 export default rootReducer;

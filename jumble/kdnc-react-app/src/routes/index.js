@@ -13,6 +13,7 @@ import Logout from "../components/secure/Logout";
 import SmartColorSwatch from "../components/colors/SmartColorSwatch";
 import People from "../components/people/People";
 import PersonProfileContainer from "../containers/PersonProfileContainer";
+import PlacesContainer from "../containers/place/PlacesContainer";
 
 const routes = (
   <div>
@@ -31,6 +32,10 @@ const routes = (
 
         <Route path={'/people/:id'} component={PersonProfileContainer}/>
         <Route path={'/people'} component={People}/>
+
+        <Route path='/places' render={() => {
+          return <PlacesContainer />
+        }}/>
 
         <ProtectedRoute path={'/protected'} component={ProtectedHome}/>
         <Route path={'/login'} component={Login}/>

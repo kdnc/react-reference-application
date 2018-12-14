@@ -9,6 +9,7 @@ const NavBar = () => {
     {name: 'Smart Color', url: '/color/Green/Green'},
     {name: 'Logging', url: '/logging'},
     {name: 'People', url: '/people'},
+    {name: 'Places', url: '/places'},
     {name: 'Protected', url: '/protected'},
     {name: '404 Error', url: '/404Error'},
   ];
