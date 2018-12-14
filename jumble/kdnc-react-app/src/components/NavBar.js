@@ -7,6 +7,7 @@ const NavBar = () => {
     {name: 'Prompt', url: '/prompt'},
     {name: 'Color', url: '/color'},
     {name: 'Smart Color', url: '/color/Green/Green'},
+    {name: 'Recursion', url: '/recursive-color/Top Parent/yellow'},
     {name: 'Logging', url: '/logging'},
     {name: 'People', url: '/people'},
     {name: 'Places', url: '/places'},

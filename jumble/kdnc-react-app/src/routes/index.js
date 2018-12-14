@@ -14,6 +14,7 @@ import SmartColorSwatch from "../components/colors/SmartColorSwatch";
 import People from "../components/people/People";
 import PersonProfileContainer from "../containers/PersonProfileContainer";
 import PlacesContainer from "../containers/place/PlacesContainer";
+import RecursiveColorSwatch from "../components/colors/RecursiveColorSwatch";
 
 const routes = (
   <div>
@@ -23,6 +24,7 @@ const routes = (
         <Route exact path="/" component={Home} />
         <Route path="/prompt" component={NameForm} />
 
+        <Route path='/recursive-color/:text/:color' component={RecursiveColorSwatch}/>
         <Route path='/color/:text/:color' component={SmartColorSwatch}/>
         <Route path='/color' render={() => {
           return <ColorSwatch text='Red' color='#ff0000'/>
