@@ -19,7 +19,7 @@ const Unicorn = ({match, location}) => {
         {' | '}
         <Link to={`${match.url}?direction=right`}>Right</Link>
       </h4>
-      <img src={`/assets/unicorn_${direction}.png`} width={400}/>
+      <img alt={'Unicorn'} src={`/assets/unicorn_${direction}.png`} width={400}/>
 
     </div>
   );
