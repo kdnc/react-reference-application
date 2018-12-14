@@ -13,6 +13,7 @@ const NavBar = () => {
     {name: 'Places', url: '/places'},
     {name: 'Protected', url: '/protected'},
     {name: '404 Error', url: '/404Error'},
+    {name: 'Route Transitions', url: '/route-transitions'},
     {name: 'Redirect Route', url: '/redirect'},
   ];
 

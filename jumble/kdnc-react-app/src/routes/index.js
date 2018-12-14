@@ -17,6 +17,7 @@ import PlacesContainer from "../containers/place/PlacesContainer";
 import RecursiveColorSwatch from "../components/colors/RecursiveColorSwatch";
 import Unicorn from "../components/redirect-finished/Unicorn";
 import {Redirect} from "react-router-dom";
+import Fade from "../components/route-transition/Fade";
 
 const routes = (
   <div>
@@ -44,6 +45,8 @@ const routes = (
         <ProtectedRoute path={'/protected'} component={ProtectedHome}/>
         <Route path={'/login'} component={Login}/>
         <Route path={'/logout'} component={Logout}/>
+
+        <Route path='/route-transitions' component={Fade} />
 
         <Route path={'/redirect-finished'} component={Unicorn}/>
         <Redirect to='/redirect-finished' from='/redirect'/>
