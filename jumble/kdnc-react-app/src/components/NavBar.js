@@ -15,6 +15,7 @@ const NavBar = () => {
     {name: '404 Error', url: '/404Error'},
     {name: 'Route Transitions', url: '/route-transitions'},
     {name: 'Redirect Route', url: '/redirect'},
+    {name: 'Redux Messenger', url: '/redux-messenger'},
   ];
 
   let linksComponents = links.map((link, index) => {

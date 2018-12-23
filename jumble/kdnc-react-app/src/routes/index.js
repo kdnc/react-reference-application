@@ -18,6 +18,7 @@ import RecursiveColorSwatch from "../components/colors/RecursiveColorSwatch";
 import Unicorn from "../components/redirect-finished/Unicorn";
 import {Redirect} from "react-router-dom";
 import Fade from "../components/route-transition/Fade";
+import Messenger from "../components/redux-messenger/index";
 
 const routes = (
   <div>
@@ -50,6 +51,8 @@ const routes = (
 
         <Route path={'/redirect-finished'} component={Unicorn}/>
         <Redirect to='/redirect-finished' from='/redirect'/>
+
+        <Route path={'/redux-messenger'} component={Messenger} />
 
         <Route component={PageNotFound} />
 
