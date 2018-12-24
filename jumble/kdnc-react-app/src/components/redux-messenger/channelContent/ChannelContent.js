@@ -1,5 +1,5 @@
 import React from 'react'
-import { OFFLINE } from './../../../actions'
+import {OFFLINE} from './../../../actions/messenger/updateStatus'
 import {MessageContainer} from "../../../containers/messenger/message";
 
 export const ChannelContent = ({messages, channelName, status, fetchStatus}) => (

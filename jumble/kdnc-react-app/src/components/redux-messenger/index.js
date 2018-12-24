@@ -3,6 +3,7 @@ import {CurrentUserContainer} from "../../containers/messenger/currentUser/Curre
 import {ChannelContentContainer} from "../../containers/messenger/channelContent/ChannelContentContainer";
 import {ChannelListContainer} from "../../containers/messenger/channelList/ChannelListContainer";
 import {ContactListContainer} from "../../containers/messenger/contactList/ContactListContainer";
+import {CurrentChannelTextInputContainer} from "../../containers/messenger/currentChannelTextInput/CurrentChannelTextInputContainer";
 
 const Messenger = () => {
 
@@ -18,20 +19,23 @@ const Messenger = () => {
       <div className="row">
         <div className="col-xs-3">
           <div>
-            <ChannelListContainer />
+            <ChannelListContainer/>
           </div>
         </div>
         <div className="col-xs-6">
           <div>
-            <ChannelContentContainer />
+            <ChannelContentContainer/>
+          </div>
+          <div>
+            <CurrentChannelTextInputContainer/>
           </div>
         </div>
         <div className="col-xs-3">
           <div>
-            <CurrentUserContainer />
+            <CurrentUserContainer/>
           </div>
           <div>
-            <ContactListContainer />
+            <ContactListContainer/>
           </div>
         </div>
       </div>

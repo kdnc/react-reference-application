@@ -1,12 +1,12 @@
 import {fromJS} from "immutable";
 import {users, User, channels, Channel} from './db';
-import {FETCHED, NOT_FETCHED} from "./actions";
+import {FETCHED, NOT_FETCHED} from "./actions/messenger";
 
 export const getDefaultState = () => {
   const defaultState = {
     currentUser: {},
     channels: [],
-    userInfo:[],
+    userInfo: [],
   };
 
   const currentUser = users[0];

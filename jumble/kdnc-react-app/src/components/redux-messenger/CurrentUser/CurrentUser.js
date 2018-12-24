@@ -1,9 +1,5 @@
 import React from 'react'
-import {
-  ONLINE,
-  OFFLINE,
-  AWAY
-} from './../../../actions'
+import {ONLINE, OFFLINE, AWAY} from './../../../actions/messenger/updateStatus'
 
 export const CurrentUser = ({name, status, updateStatus, id}) => (
   <div>

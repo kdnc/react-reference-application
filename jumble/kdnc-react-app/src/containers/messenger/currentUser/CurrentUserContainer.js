@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {updateStatus} from '../../../actions/index'
+import {updateStatus} from '../../../actions/messenger/updateStatus'
 import {CurrentUser} from "../../../components/redux-messenger/CurrentUser";
 
 const mapStateToProps = (state) => {
