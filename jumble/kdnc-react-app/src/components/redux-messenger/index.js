@@ -1,5 +1,6 @@
 import React from 'react';
 import {CurrentUserContainer} from "../../containers/messenger/currentUser/CurrentUserContainer";
+import {ChannelContentContainer} from "../../containers/messenger/channelContent/ChannelContentContainer";
 
 const Messenger = () => {
 
@@ -13,6 +14,11 @@ const Messenger = () => {
         </div>
       </nav>
       <div className="row">
+        <div className="col-xs-6">
+          <div>
+            <ChannelContentContainer />
+          </div>
+        </div>
         <div className="col-xs-3">
           <div>
             <CurrentUserContainer/>

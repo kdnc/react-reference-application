@@ -11,6 +11,7 @@ import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers';
 import {fromJS} from 'immutable';
 import {getDefaultState} from "./getDefaultState";
+import {initializeDB} from "./db/initializeDB";
 
 /* Kdnc - connected-react-router - Step 1
 Create a history object. */
@@ -21,6 +22,7 @@ Use routerMiddleware(history) if you want to dispatch history actions
 (e.g. to change URL with push('/path/to/somewhere')). */
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+initializeDB();
 const defaultState = getDefaultState();
 
 const store = createStore(
