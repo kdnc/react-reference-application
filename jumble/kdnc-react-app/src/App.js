@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import { ConnectedRouter } from 'connected-react-router/immutable';
-import logo from './logo.svg';
 import routes from './routes'
 import './App.css';
 
