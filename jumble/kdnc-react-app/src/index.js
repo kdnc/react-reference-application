@@ -4,7 +4,7 @@ import {applyMiddleware, compose, createStore} from "redux";
 import {Provider} from 'react-redux';
 import {createBrowserHistory} from "history";
 import {routerMiddleware} from 'connected-react-router';
-import {AppContainer} from 'react-hot-loader';
+// import {AppContainer} from 'react-hot-loader';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -37,11 +37,9 @@ const store = createStore(
 
 const render = () => {
   ReactDOM.render(
-    <AppContainer>
       <Provider store={store}>
         <App history={history}/>
-      </Provider>
-    </AppContainer>,
+      </Provider>,
     document.getElementById('root')
   );
 };
