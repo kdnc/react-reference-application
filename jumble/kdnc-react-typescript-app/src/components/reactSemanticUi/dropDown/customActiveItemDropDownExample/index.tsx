@@ -58,6 +58,7 @@ const CustomActiveItemDropDownExample = () => {
       selection
       options={options}
       {...triggerObj}
+      // @ts-ignore 'event' is declared but its value is never read.
       onChange={(event, data: any) => {
         setSelectedOrderId(data.value);
       }}

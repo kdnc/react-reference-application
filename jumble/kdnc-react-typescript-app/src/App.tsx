@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 import DropDownExamples from './features/reactSemanticUi/dropDownExamples';
 import TableExamples from './features/reactSemanticUi/tableExamples';
+import { StyledMainContainer } from './App.styles';
+import TextInputWithFocusButton from './react-hooks/useRef/1.useRef-to-access-a-dom-element/TextInputWithFocusButton';
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -27,6 +29,11 @@ const App: React.FC = () => {
           <li>
             <Link to="/dashboard">Dashboard</Link>
           </li>
+          <li>
+            <Link to="/react-hooks/useRef/1.useRef-to-access-a-dom-element">
+              Use Ref to access a dom element
+            </Link>
+          </li>
         </ul>
 
         <hr />
@@ -47,6 +54,9 @@ const App: React.FC = () => {
           </Route>
           <Route path="/dashboard">
             <Dashboard />
+          </Route>
+          <Route path="/react-hooks/useRef/1.useRef-to-access-a-dom-element">
+            <TextInputWithFocusButton />
           </Route>
         </Switch>
       </div>
@@ -77,10 +87,10 @@ const About: React.FC = () => {
 
 const Dashboard: React.FC = () => {
   return (
-    <div>
+    <StyledMainContainer>
       <h2>Dashboard</h2>
       <DropDownExamples />
       <TableExamples />
-    </div>
+    </StyledMainContainer>
   );
 };
