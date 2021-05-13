@@ -28,6 +28,7 @@ import About from '../../components/About';
 import TextInputWithFocusButton from '../../react-hooks/useRef/1.useRef-to-access-a-dom-element/TextInputWithFocusButton';
 import { Link as RouterLink } from 'react-router-dom';
 import Dashboard from '../../components/Dashboard';
+import MaterialUiMainComponent from '../../features/material-ui';
 
 export const mainListItems = (
   <div>
@@ -35,19 +36,25 @@ export const mainListItems = (
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <Link component={RouterLink} to="/"><ListItemText primary="Home" /></Link>
+      <Link component={RouterLink} to="/">
+        <ListItemText primary="Home" />
+      </Link>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
-      <Link component={RouterLink} to="/about"><ListItemText primary="About" /></Link>
+      <Link component={RouterLink} to="/about">
+        <ListItemText primary="About" />
+      </Link>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
-      <Link component={RouterLink} to="/dashboard"><ListItemText primary="Dashboard" /></Link>
+      <Link component={RouterLink} to="/dashboard">
+        <ListItemText primary="Dashboard" />
+      </Link>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
@@ -55,8 +62,15 @@ export const mainListItems = (
       </ListItemIcon>
       <Link component={RouterLink} to="/react-hooks/useRef/1.useRef-to-access-a-dom-element">
         <ListItemText primary="Use Ref to access a dom element" />
-    </Link>
-      
+      </Link>
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <PeopleIcon />
+      </ListItemIcon>
+      <Link component={RouterLink} to="/material-ui">
+        <ListItemText primary="Material UI" />
+      </Link>
     </ListItem>
   </div>
 );
@@ -202,23 +216,25 @@ export default function MainLayout() {
           you have multiple routes, but you want only one
           of them to render at a time
         */}
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/dashboard">
-            <Dashboard />
-          </Route>
-          <Route path="/react-hooks/useRef/1.useRef-to-access-a-dom-element">
-            <TextInputWithFocusButton />
-          </Route>
-        </Switch>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard />
+            </Route>
+            <Route path="/react-hooks/useRef/1.useRef-to-access-a-dom-element">
+              <TextInputWithFocusButton />
+            </Route>
+            <Route path="/material-ui">
+              <MaterialUiMainComponent />
+            </Route>
+          </Switch>
         </Container>
       </main>
     </div>
   );
 }
-
