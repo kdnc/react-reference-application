@@ -14,6 +14,7 @@ import NestingSelectors from './styles/4.nesting-selectors';
 import AdaptingHook from './styles/5.adapting-based-on-props/1.adapting-the-hook-api';
 import AdaptingStyledComponents from './styles/5.adapting-based-on-props/2.adapting-the-styled-components-api';
 import AdaptingHOC from './styles/5.adapting-based-on-props/3.adapting-the-higher-order-component-api';
+import StressTest from './styles/5.adapting-based-on-props/4.stress-test';
 
 const useStyles = makeStyles({
   root: {
@@ -101,6 +102,17 @@ export default function MaterialUiMainComponent() {
                 </Typography>
               }
             />
+            <TreeItem
+              nodeId="10"
+              label={
+                <Typography
+                  component={RouterLink}
+                  to={`${path}/styles/adapting-based-on-props/stress-test`}
+                >
+                  Stress test
+                </Typography>
+              }
+            />
           </TreeItem>
         </TreeItem>
       </TreeView>
@@ -126,6 +138,9 @@ export default function MaterialUiMainComponent() {
         </Route>
         <Route path={`${path}/styles/adapting-based-on-props/adapting-the-hoc-api`}>
           <AdaptingHOC />
+        </Route>
+        <Route path={`${path}/styles/adapting-based-on-props/stress-test`}>
+          <StressTest />
         </Route>
       </Switch>
     </div>
