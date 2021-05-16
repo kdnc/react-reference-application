@@ -1,25 +1,24 @@
 import React from 'react';
-import { StyledTableContainer } from './styles';
-// import MobileSupportedTableExample from '../../../components/reactSemanticUi/table/mobileSupportedTable';
-import ConfigurableTable from '../../../components/ConfigurableTable/ConfigurableTable';
 import { Responsive, Table } from 'semantic-ui-react';
+import { StyledTableContainer } from '../styles';
+import ConfigurableTable from './ConfigurableTable/ConfigurableTable';
 
 const columns = [
   {
     id: 'title',
     label: 'Title',
-    type: 'text'
+    type: 'text',
   },
   {
     id: 'rank',
     label: 'IMDB rank',
-    type: 'integer'
+    type: 'integer',
   },
   {
     id: 'country',
     label: 'Country',
-    type: 'custom'
-  }
+    type: 'custom',
+  },
 ];
 
 const rows = [
@@ -28,25 +27,25 @@ const rows = [
     data: {
       title: 'Planet Earth II',
       rank: 1,
-      country: 'Sri Lanka'
-    }
+      country: 'Sri Lanka',
+    },
   },
   {
     id: 'tt0185906',
     data: {
       title: 'Band of Brothers',
       rank: 2,
-      country: 'India'
-    }
+      country: 'India',
+    },
   },
   {
     id: 'tt0795176',
     data: {
       title: 'Planet Earth',
       rank: 3,
-      country: <span style={{ backgroundColor: 'aqua' }}>Bhutan</span>
-    }
-  }
+      country: <span style={{ backgroundColor: 'aqua' }}>Bhutan</span>,
+    },
+  },
 ];
 
 const TableExamples = () => {
@@ -92,7 +91,6 @@ const TableExamples = () => {
   return (
     <>
       <StyledTableContainer>
-        {/* <MobileSupportedTableExample /> */}
         <ConfigurableTable
           columns={columns}
           rows={rows}

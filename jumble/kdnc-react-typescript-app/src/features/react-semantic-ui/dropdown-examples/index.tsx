@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomActiveItemDropDownExample from '../../../components/reactSemanticUi/dropDown/customActiveItemDropDownExample';
+import CustomActiveItemDropDownExample from './dropdown/custom-active-item-dropdown-example';
 import { StyledDropDownContainer } from './styles';
 
 const DropDownExamples = () => {
