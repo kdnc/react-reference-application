@@ -22,13 +22,13 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
-import { Switch, Route } from 'react-router-dom';
-import Home from '../../components/Home';
-import About from '../../components/About';
-import TextInputWithFocusButton from '../../react-hooks/useRef/1.useRef-to-access-a-dom-element/TextInputWithFocusButton';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import Home from '../components/Home';
+import About from '../components/About';
+import TextInputWithFocusButton from '../react-hooks/useRef/1.useRef-to-access-a-dom-element/TextInputWithFocusButton';
 import { Link as RouterLink } from 'react-router-dom';
-import Dashboard from '../../components/Dashboard';
-import MaterialUiMainComponent from '../../features/material-ui';
+import Dashboard from '../components/Dashboard';
+import MaterialUiMainComponent from '../features/material-ui';
 
 export const mainListItems = (
   <div>
@@ -156,7 +156,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MainLayout() {
+export default function FeaturesLayout() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -232,6 +232,7 @@ export default function MainLayout() {
             <Route path="/material-ui">
               <MaterialUiMainComponent />
             </Route>
+            <Redirect to="/" />
           </Switch>
         </Container>
       </main>
