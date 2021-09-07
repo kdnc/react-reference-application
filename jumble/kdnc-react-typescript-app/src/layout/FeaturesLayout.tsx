@@ -25,6 +25,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import MaterialUiMainComponent from '../features/material-ui';
 import ReactSemanticUiComponent from '../features/react-semantic-ui';
 import ReactHooksMainComponent from '../features/react-hooks';
+import UxDesignsComponent from '../features/ux-designs';
 
 export const mainListItems = (
   <div>
@@ -50,6 +51,14 @@ export const mainListItems = (
       </ListItemIcon>
       <Link component={RouterLink} to="/material-ui">
         <ListItemText primary="Material UI" />
+      </Link>
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <PeopleIcon />
+      </ListItemIcon>
+      <Link component={RouterLink} to="/ux-designs">
+        <ListItemText primary="UX Designs" />
       </Link>
     </ListItem>
   </div>
@@ -205,6 +214,9 @@ export default function FeaturesLayout() {
             </Route>
             <Route path="/material-ui">
               <MaterialUiMainComponent />
+            </Route>
+            <Route path="/ux-designs">
+              <UxDesignsComponent />
             </Route>
             <Redirect to="/material-ui" />
           </Switch>
